@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Dashboard')</title>
-    <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> <!-- Add custom styles here -->
 </head>
 <body>
-    <div class="sidebar">
-        @include('partials.sidebar') <!-- Sidebar Menu -->
-    </div>
-
-    <div class="main-content">
-        <header>
-            @include('partials.header') <!-- Header -->
-        </header>
-
-        <div class="content">
-            @yield('content') <!-- Main Content -->
+    <div class="d-flex" style="height: 100vh;">
+        <!-- Sidebar -->
+        @include('partials.sidebar')
+        
+        <!-- Main Content -->
+        <div class="flex-grow-1 d-flex flex-column">
+            <!-- Header -->
+            @include('partials.header')
+            
+            <!-- Page Content -->
+            <main class="flex-grow-1 p-3">
+                @yield('content')
+            </main>
         </div>
     </div>
 
-    <footer>
-        @include('partials.footer') <!-- Footer -->
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

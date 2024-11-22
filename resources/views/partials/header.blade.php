@@ -1,32 +1,20 @@
-<div class="header">
-    <div class="user-dropdown">
-        <button class="dropdown-toggle">Welcome, {{ Auth::user()->name }} ▼</button>
-        <ul class="dropdown-menu">
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/logout">Logout</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ asset('images/user.png') }}" alt="User" class="rounded-circle" style="width: 30px; height: 30px;">
+                    Admin
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
-</div>
+</nav>
 
-<style>
-    .user-dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: #fff;
-        border: 1px solid #ddd;
-        padding: 10px;
-        list-style: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .user-dropdown:hover .dropdown-menu {
-        display: block;
-    }
-</style>
