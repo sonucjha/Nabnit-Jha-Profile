@@ -1,5 +1,5 @@
 <div class="bg-dark text-white p-3" style="width: 250px;">
-    <h5 class="text-center">Admin Menu</h5>
+    <h5 class="text-center mb-5">Nabnit-Jha-Profile</h5>
     <ul class="nav flex-column">
         <!-- Dashboard -->
         <li class="nav-item">
