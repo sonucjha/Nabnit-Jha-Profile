@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <!-- Add custom styles here -->
+    <link rel="stylesheet" href="{{ asset('css/nabnit/nabnit_header.css') }}"> 
 </head>
 
 <body>
@@ -33,7 +34,9 @@
     <!-- footer area -->
     @include('nabnit_partials.footer')
 
+    
     <script src="{{ asset('css/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('css/nabnit/nabnit_header.js') }}"></script>
 </body>
 
 </html>
