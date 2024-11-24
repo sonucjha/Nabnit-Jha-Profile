@@ -32,6 +32,7 @@
     </div>
 
     <script src="{{ asset('css/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/axios.min.js') }}"></script>
 </body>
 
 </html>
