@@ -15,10 +15,10 @@
     <!-- Additional CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('css/assets/css/fontawesome.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/assets/css/templatemo-style.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/assets/css/owl.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/assets/css/lightbox.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/assets/css/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/assets/css/templatemo-style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/assets/css/owl.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/assets/css/lightbox.css') }}" />
 
 </head>
 
@@ -47,16 +47,17 @@
 
     </div>
 
-    <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('css/jquery.min.js') }}"></script>
     <script src="{{ asset('css/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('css/nabnit/nabnit_header.js') }}"></script>
 
-    <script src="{{asset('css/assets/js/isotope.min.js')}}"></script>
-    <script src="{{asset('css/assets/js/owl-carousel.js')}}"></script>
-    <script src="{{asset('css/assets/js/lightbox.js')}}"></script>
-    <script src="{{asset('css/assets/js/custom.js')}}"></script>
+    <script src="{{ asset('css/assets/js/isotope.min.js') }}"></script>
+    <script src="{{ asset('css/assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ asset('css/assets/js/lightbox.js') }}"></script>
+    <script src="{{ asset('css/assets/js/custom.js') }}"></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('css/nabnit/nabnit.js') }}"></script>
 
 </body>
 
