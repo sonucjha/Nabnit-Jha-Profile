@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-text">
-                        <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled cs_about">
+                        <ul class="mt-1 mb-5 mb-lg-0 profile-list list-unstyled cs_about">
                             <li><strong>Full Name:</strong> <span class="info-text">Ben Wilson</span></li>
                             <li><strong>Higher Education:</strong> <span class="info-text"><a href="https://company.co" target="_blank">company.co</a></span></li>
                             <li><strong>Total Experience:</strong> <span class="info-text"><a href="mailto:hello@company.co">hello@company.co</a></span></li>
@@ -26,9 +26,10 @@
                             <li><strong>Date of Birth:</strong> <span class="info-text">26 September 1999</span></li>
 
                         </ul>
-                        <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                            <a href="#" class="custom-btn btn-stylish">Download CV</a>
-                        </div>
+                       
+                    </div>
+                    <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                        <a href="#" class="custom-btn btn-stylish">Download CV</a>
                     </div>
                 </div>
             </div>
