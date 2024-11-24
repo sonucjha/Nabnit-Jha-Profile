@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutMe;
 use Illuminate\Http\Request;
+use Illuminate\Support\ViewErrorBag;
 
 class AboutMeController extends Controller
 {
@@ -16,6 +17,9 @@ class AboutMeController extends Controller
 
     public function create()
     {
+        return view('partials.about_me.create', [
+            'errors' => session()->get('errors', new ViewErrorBag),
+        ]);
         return view('partials.about_me.create');
     }
 
