@@ -10,20 +10,20 @@
         </div>
         <div class="left-image-post">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 about_me">
                     <div class="left-image">
                         <img src="{{asset('css/assets/images/left-image.jpg')}}" alt="Profile Image" class="img-fluid" />
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 par_about_me">
                     <div class="right-text">
-                        <ul class="mt-1 mb-5 mb-lg-0 profile-list list-unstyled cs_about">
+                        <ul class="mb-5 mb-lg-0 profile-list list-unstyled cs_about">
                             <li><strong>Full Name:</strong> <span class="info-text">Ben Wilson</span></li>
                             <li><strong>Higher Education:</strong> <span class="info-text"><a href="https://company.co" target="_blank">company.co</a></span></li>
                             <li><strong>Total Experience:</strong> <span class="info-text"><a href="mailto:hello@company.co">hello@company.co</a></span></li>
                             <li><strong>Expected Salary:</strong> <span class="info-text">Ben Wilson</span></li>
                             <li><strong>Skills:</strong> <span class="info-text">Ben Wilson</span></li>
-                            <li><strong>Date of Birth:</strong> <span class="info-text">26 September 1999</span></li>
+                            {{-- <li><strong>Date of Birth:</strong> <span class="info-text">26 September 1999</span></li> --}}
 
                         </ul>
                        
@@ -93,6 +93,11 @@
     flex-direction: column!important;
 }
  
+.par_about_me{
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content:space-between!important;
+}
 .cs_about strong{
     color: white;
 }
