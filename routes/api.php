@@ -16,10 +16,10 @@ Route::get('/nabnit-profile', function () {
     return view('nabnit_dashboard');
 });
 
-Route::view('/about-me', 'about-me')->name('about.me');
-Route::view('/skills', 'skills')->name('skills');
-Route::view('/work', 'work')->name('work');
-Route::view('/image-upload', 'image-upload')->name('image.upload');
+Route::view('/about-me', 'about-_me')->name('about_me');
+Route::view('/skills', 'what_i_am_good')->name('skills');
+Route::view('/work', 'my_work')->name('work');
+Route::view('/image-upload', 'image_upload')->name('image_upload');
 
 
 
