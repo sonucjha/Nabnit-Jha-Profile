@@ -20,6 +20,11 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('socical-account') }}">
+                <i class="fas fa-briefcase me-2"></i> Socical Account
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('image_upload') }}">
                 <i class="fas fa-upload me-2"></i> Image Upload
             </a>
