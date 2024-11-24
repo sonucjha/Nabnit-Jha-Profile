@@ -10,10 +10,11 @@
 
     <title>Nabnit-Jha-Profile</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/nabnit/bootstrap.min.css') }}">
 
     <!-- Additional CSS Files -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> --}}
 
     <link rel="stylesheet" href="{{ asset('css/assets/css/fontawesome.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/assets/css/templatemo-style.css') }}" />
