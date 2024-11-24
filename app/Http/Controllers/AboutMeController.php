@@ -3,7 +3,6 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutMe;
 use Illuminate\Http\Request;
-use Illuminate\Support\ViewErrorBag;
 
 class AboutMeController extends Controller
 {
@@ -17,9 +16,6 @@ class AboutMeController extends Controller
 
     public function create()
     {
-        return view('partials.about_me.create', [
-            'errors' => session()->get('errors', new ViewErrorBag),
-        ]);
         return view('partials.about_me.create');
     }
 
@@ -51,11 +47,8 @@ class AboutMeController extends Controller
     // PUT: Update a specific about_me
     public function update(Request $request, $id)
     {
-        $aboutMe = AboutMe::find($id);
-
-        if (!$aboutMe) {
-            return response()->json(['message' => 'AboutMe not found'], 404);
-        }
+        // Find the record 
+        $aboutMe = AboutMe::findOrFail($id);
 
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -73,10 +66,10 @@ class AboutMeController extends Controller
     {
         // Find the record to delete
         $aboutMe = AboutMe::findOrFail($id);
-        
+
         // Delete the record
         $aboutMe->delete();
-        
+
         // Redirect to the same page (e.g., the list of AboutMe entries)
         return redirect()->route('about_me.index')->with('success', 'Record deleted successfully.');
     }
