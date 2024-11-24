@@ -18,3 +18,11 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/nabnit-profile', function () {
+    return view('nabnit_dashboard');
+});
