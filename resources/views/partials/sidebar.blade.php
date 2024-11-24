@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <ul class="nav flex-column">
+    <ul class="nav flex-column" style="margin-top: 5rem;">
         <!-- About Me -->
         <li class="nav-item">
             <a class="nav-link" href="#">
