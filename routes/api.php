@@ -20,7 +20,7 @@ Route::view('/about-me', 'partials.about_me')->name('about_me');
 Route::view('/skills', 'partials.what_i_am_good')->name('skills');
 Route::view('/work', 'partials.my_work')->name('work');
 Route::view('/image-upload', 'partials.image_upload')->name('image_upload');
-Route::view('/socical-account', 'partials.socical_account')->name('image_upload');
+Route::view('/socical-account', 'partials.socical_account')->name('socical_account');
 
 
 
