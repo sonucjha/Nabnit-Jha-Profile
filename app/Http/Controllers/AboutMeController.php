@@ -10,7 +10,6 @@ class AboutMeController extends Controller
     public function index()
     {
         $aboutMe = AboutMe::all();
-        dd($aboutMe);
         return view('partials.about_me.index', compact('aboutMe')); // pass data to about_me page
         return response()->json($aboutMe); // Respond with a JSON of all records
     }

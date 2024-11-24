@@ -20,7 +20,7 @@ Route::get('/nabnit-profile', function () {
 Route::get('/about_me/index', [AboutMeController::class, 'index'])->name('about_me.index'); // GET: List all about_me
 Route::view('/about_me/create', 'partials.about_me.create')->name('about_me.create'); // GET: Create Form
 Route::post('/about_me/store', [AboutMeController::class, 'store'])->name('about_me.store'); // POST: Create a new about_me
-Route::get('/about_me/{id}/edit', [AboutMeController::class, 'show'])->name('about_me.show'); // GET: Show a specific about_me
+Route::get('/about_me/{id}/edit', [AboutMeController::class, 'show'])->name('about_me.edit'); // GET: Show a specific about_me
 Route::put('/about_me/{id}/update', [AboutMeController::class, 'update'])->name('about_me.update'); // PUT: Update a specific about_me
 Route::delete('/about_me/{id}/delete', [AboutMeController::class, 'destroy'])->name('about_me.destroy'); // DELETE: Delete a specific about_me
 
