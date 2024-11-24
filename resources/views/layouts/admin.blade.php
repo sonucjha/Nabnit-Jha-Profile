@@ -9,6 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"> <!-- Add custom styles here -->
+    <link rel="stylesheet" href="{{ asset('css/admin/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
 </head>
 <body>
     <div class="d-flex" style="height: 100vh;">

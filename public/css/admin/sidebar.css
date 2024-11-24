@@ -1,0 +1,46 @@
+/* ----------------------------------------------------------------------------- */
+
+/* Sidebar Styling */
+.sidebar {
+    background: linear-gradient(135deg, #4b79a1, #283e51); /* Gradient Background */
+    color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+}
+
+/* Navigation Links */
+.sidebar .nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Icon and Text Styling */
+.sidebar .nav-link i {
+    font-size: 18px;
+}
+
+/* Hover Effects */
+.sidebar .nav-link:hover {
+    background-color: #00aaff;
+    color: #fff;
+    transform: translateX(5px); /* Slight Movement */
+}
+
+/* Active Link Styling */
+.sidebar .nav-link.active {
+    background-color: #005f7f;
+    color: #fff;
+}
+
+/* Margin between Items */
+.sidebar .nav-item:not(:last-child) {
+    margin-bottom: 15px;
+}
