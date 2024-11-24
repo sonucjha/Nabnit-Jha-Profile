@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/assets/css/templatemo-style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/assets/css/owl.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/assets/css/lightbox.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/about_me.css') }}" />
 
 </head>
 
