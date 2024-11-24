@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AboutMeController;
 
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -17,9 +18,11 @@ Route::get('/nabnit-profile', function () {
 });
 
 // about me routes
-Route::view('/about-me/index', 'partials.about_me.index')->name('about_me.index');
-Route::view('/about-me/create', 'partials.about_me.create')->name('about_me.create');
-Route::view('/about-me/edit', 'partials.about_me.edit')->name('about_me.edit');
+
+ // Route for listing about_me details
+ Route::get('/about_me/index', [AboutMeController::class, 'index'])->name('about_me.index');
+ Route::post('/about_me/create', [AboutMeController::class, 'create'])->name('about_me.create');
+ Route::put('/about_me/edit/{id}', [AboutMeController::class, 'edit'])->name('about_me.edit');
 
 // skills me routes
 Route::view('/skills/index', 'partials.skills.index')->name('skills.index');

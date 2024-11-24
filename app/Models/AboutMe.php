@@ -9,6 +9,7 @@ class AboutMe extends Model
 {
     use HasFactory;
 
+    protected $table = 'about_me'; // Ensure the table name matches your database table
     protected $fillable = ['title', 'description'];
 }
 
