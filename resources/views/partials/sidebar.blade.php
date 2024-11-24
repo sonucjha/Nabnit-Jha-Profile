@@ -1,5 +1,12 @@
 <div class="sidebar">
-    <ul class="nav flex-column" style="margin-top: 5rem;">
+    <ul class="nav flex-column brand-backgound">
+        <!-- About Me -->
+        <li class="nav-item">
+                 Nabnit
+        </li>
+        <!-- What I’m good at -->
+    </ul>
+    <ul class="nav flex-column" style="margin-top: 2rem;">
         <!-- About Me -->
         <li class="nav-item">
             <a class="nav-link" href="#">
