@@ -3,7 +3,7 @@
 @section('content')
 <div>
     <h1>Edit About Me</h1>
-    {{-- <form action="{{ route('about_me.update', $aboutMe->id) }}" method="POST">
+    <form action="{{ route('about_me.update', $aboutMe->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div>
@@ -17,6 +17,6 @@
             @error('description')<span>{{ $message }}</span>@enderror
         </div>
         <button type="submit">Update</button>
-    </form> --}}
+    </form>
 </div>
 @endsection

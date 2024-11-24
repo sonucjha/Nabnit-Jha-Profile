@@ -8,11 +8,9 @@ class AboutMeController extends Controller
 {
     public function index()
     {
-        return response()->json('i am sonu jha');
-        // $aboutMe = AboutMe::all();
+        $aboutMe = AboutMe::all();
         
-        // dd($aboutMe); // Dumps data and stops execution
-        // return view('about_me.index', compact('aboutMe'));
+        return view('about_me.index', compact('aboutMe'));
     }
 
     public function create()

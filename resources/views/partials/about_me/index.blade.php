@@ -3,7 +3,7 @@
 @section('content')
 <div>
     <h1>About Me Details</h1>
-    {{-- <a href="{{ route('about_me.create') }}">Add New</a>
+    <a href="{{ route('about_me.create') }}">Add New</a>
     <ul>
         @foreach ($aboutMe as $entry)
         <li>
@@ -17,6 +17,6 @@
             </form>
         </li>
         @endforeach
-    </ul> --}}
+    </ul>
 </div>
 @endsection

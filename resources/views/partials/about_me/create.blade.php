@@ -3,7 +3,7 @@
 @section('content')
 <div>
     <h1>Add About Me</h1>
-    {{-- <form action="{{ route('about_me.store') }}" method="POST">
+    <form action="{{ route('about_me.store') }}" method="POST">
         @csrf
         <div>
             <label for="title">Title</label>
@@ -16,6 +16,6 @@
             @error('description')<span>{{ $message }}</span>@enderror
         </div>
         <button type="submit">Save</button>
-    </form> --}}
+    </form>
 </div>
 @endsection
