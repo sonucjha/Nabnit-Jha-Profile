@@ -23,6 +23,7 @@ Route::get('/nabnit-profile', function () {
  Route::get('/about_me/index', [AboutMeController::class, 'index'])->name('about_me.index');
  Route::post('/about_me/create', [AboutMeController::class, 'create'])->name('about_me.create');
  Route::put('/about_me/edit/{id}', [AboutMeController::class, 'edit'])->name('about_me.edit');
+ Route::put('/about_me/destroy/{id}', [AboutMeController::class, 'delete'])->name('about_me.destroy');
 
 // skills me routes
 Route::view('/skills/index', 'partials.skills.index')->name('skills.index');
