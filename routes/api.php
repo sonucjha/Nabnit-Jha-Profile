@@ -16,13 +16,30 @@ Route::get('/nabnit-profile', function () {
     return view('nabnit_dashboard');
 });
 
-Route::view('/about-me', 'partials.about_me')->name('about_me');
-Route::view('/skills', 'partials.skill')->name('skills');
-Route::view('/work', 'partials.my_work')->name('work');
-Route::view('/image-upload', 'partials.image_upload')->name('image_upload');
-Route::view('/socical-account', 'partials.socical_account')->name('socical_account');
+// about me routes
+Route::view('/about-me/index', 'partials.about_me.index')->name('about_me.index');
+Route::view('/about-me/create', 'partials.about_me.create')->name('about_me.create');
+Route::view('/about-me/edit', 'partials.about_me.edit')->name('about_me.edit');
 
+// skills me routes
+Route::view('/skills/index', 'partials.skills.index')->name('skills.index');
+Route::view('/skills/create', 'partials.skills.create')->name('skills.create');
+Route::view('/skills/edit', 'partials.skills.edit')->name('skills.edit');
 
+// work  routes
+Route::view('/work/index', 'partials.my_work.index')->name('my_work.index');
+Route::view('/work/create', 'partials.my_work.create')->name('my_work.create');
+Route::view('/work/edit', 'partials.my_work.edit')->name('my_work.edit');
+
+// image upload  routes
+Route::view('/image-upload/index', 'partials.image_upload.index')->name('image_upload.index');
+Route::view('/image-upload/create', 'partials.image_upload.create')->name('image_upload.create');
+Route::view('/image-upload/edit', 'partials.image_upload.edit')->name('image_upload.edit');
+
+// socical account routes
+Route::view('/socical-account/index', 'partials.socical_account.index')->name('socical_account.index');
+Route::view('/socical-account/create', 'partials.socical_account.create')->name('socical_account.create');
+Route::view('/socical-account/edit', 'partials.socical_account.edit')->name('socical_account.edit');
 
 
 
