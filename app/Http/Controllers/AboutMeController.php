@@ -68,16 +68,16 @@ class AboutMeController extends Controller
     }
 
     // DELETE: Delete a specific about_me
+    // Delete method
     public function destroy($id)
     {
-        $aboutMe = AboutMe::find($id);
-
-        if (!$aboutMe) {
-            return response()->json(['message' => 'AboutMe not found'], 404);
-        }
-
+        // Find the record to delete
+        $aboutMe = AboutMe::findOrFail($id);
+        
+        // Delete the record
         $aboutMe->delete();
-
-        return response()->json(['message' => 'AboutMe deleted successfully']); // Success message
+        
+        // Redirect to the same page (e.g., the list of AboutMe entries)
+        return redirect()->route('about_me.index')->with('success', 'Record deleted successfully.');
     }
 }
