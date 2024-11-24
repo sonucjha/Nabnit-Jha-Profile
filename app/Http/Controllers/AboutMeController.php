@@ -11,7 +11,6 @@ class AboutMeController extends Controller
     {
         $aboutMe = AboutMe::all();
         return view('partials.about_me.index', compact('aboutMe')); // pass data to about_me page
-        return response()->json($aboutMe); // Respond with a JSON of all records
     }
 
     public function create()
@@ -29,35 +28,34 @@ class AboutMeController extends Controller
 
         $aboutMe = AboutMe::create($validated);
 
-        return response()->json($aboutMe, 201); // Return the created resource with 201 status
+        // Redirect to the same page (e.g., the list of AboutMe entries)
+        return redirect()->route('about_me.index')->with('success', 'Record store successfully.');
     }
 
     // GET: Show a specific about_me
     public function show($id)
     {
-        $aboutMe = AboutMe::find($id);
+        // Find the record
+        $aboutMe = AboutMe::findOrFail($id);
 
-        if (!$aboutMe) {
-            return response()->json(['message' => 'AboutMe not found'], 404);
-        }
-
-        return response()->json($aboutMe); // Return the specific resource
+        return view('partials.about_me.edit', compact('aboutMe')); // pass data to about_me page
     }
 
     // PUT: Update a specific about_me
     public function update(Request $request, $id)
     {
-        // Find the record 
+        // Find the record
         $aboutMe = AboutMe::findOrFail($id);
 
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'required|string',
         ]);
 
         $aboutMe->update($validated);
 
-        return response()->json($aboutMe); // Return the updated resource
+        // Redirect to the same page (e.g., the list of AboutMe entries)
+        return redirect()->route('about_me.index')->with('success', 'Record update successfully.');
     }
 
     // DELETE: Delete a specific about_me
