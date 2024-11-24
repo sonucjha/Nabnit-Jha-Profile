@@ -1,13 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AboutMeController;
+use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
-
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -19,11 +16,13 @@ Route::get('/nabnit-profile', function () {
 
 // about me routes
 
- // Route for listing about_me details
- Route::get('/about_me/index', [AboutMeController::class, 'index'])->name('about_me.index');
- Route::get('/about_me/create', [AboutMeController::class, 'create'])->name('about_me.create');
- Route::put('/about_me/edit/{id}', [AboutMeController::class, 'edit'])->name('about_me.edit');
- Route::delete('/about_me/destroy/{id}', [AboutMeController::class, 'delete'])->name('about_me.destroy');
+// Route for listing about_me details
+Route::get('/about_me', [AboutMeController::class, 'index'])->name('about_me.index'); // GET: List all about_me
+Route::view('/about_me/create', 'partials.about_me.create')->name('about_me.create'); // GET: Create Form
+Route::post('/about_me', [AboutMeController::class, 'store'])->name('about_me.store'); // POST: Create a new about_me
+Route::get('/about_me/{id}', [AboutMeController::class, 'show'])->name('about_me.show'); // GET: Show a specific about_me
+Route::put('/about_me/{id}', [AboutMeController::class, 'update'])->name('about_me.update'); // PUT: Update a specific about_me
+Route::delete('/about_me/{id}', [AboutMeController::class, 'destroy'])->name('about_me.destroy'); // DELETE: Delete a specific about_me
 
 // skills me routes
 Route::view('/skills/index', 'partials.skills.index')->name('skills.index');
@@ -44,8 +43,6 @@ Route::view('/image-upload/edit', 'partials.image_upload.edit')->name('image_upl
 Route::view('/socical-account/index', 'partials.socical_account.index')->name('socical_account.index');
 Route::view('/socical-account/create', 'partials.socical_account.create')->name('socical_account.create');
 Route::view('/socical-account/edit', 'partials.socical_account.edit')->name('socical_account.edit');
-
-
 
 // Route::group([
 

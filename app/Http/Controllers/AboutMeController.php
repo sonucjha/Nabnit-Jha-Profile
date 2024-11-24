@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 
 class AboutMeController extends Controller
 {
+    // GET: List all about_me
     public function index()
     {
         $aboutMe = AboutMe::all();
-        
-        return view('partials.about_me.index', compact('aboutMe'));
+        return view('partials.about_me.index', compact('aboutMe')); // pass data to about_me page
+        return response()->json($aboutMe); // Respond with a JSON of all records
     }
 
     public function create()
@@ -18,36 +19,61 @@ class AboutMeController extends Controller
         return view('partials.about_me.create');
     }
 
+    // POST: Create a new about_me
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
             'description' => 'required|string',
         ]);
 
-        AboutMe::create($request->all());
-        return redirect()->route('partials.about_me.index')->with('success', 'Details saved successfully.');
+        $aboutMe = AboutMe::create($validated);
+
+        return response()->json($aboutMe, 201); // Return the created resource with 201 status
     }
 
-    public function edit(AboutMe $aboutMe)
+    // GET: Show a specific about_me
+    public function show($id)
     {
-        return view('partials.about_me.edit', compact('aboutMe'));
+        $aboutMe = AboutMe::find($id);
+
+        if (!$aboutMe) {
+            return response()->json(['message' => 'AboutMe not found'], 404);
+        }
+
+        return response()->json($aboutMe); // Return the specific resource
     }
 
-    public function update(Request $request, AboutMe $aboutMe)
+    // PUT: Update a specific about_me
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
+        $aboutMe = AboutMe::find($id);
+
+        if (!$aboutMe) {
+            return response()->json(['message' => 'AboutMe not found'], 404);
+        }
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
             'description' => 'required|string',
         ]);
 
-        $aboutMe->update($request->all());
-        return redirect()->route('partials.about_me.index')->with('success', 'Details updated successfully.');
+        $aboutMe->update($validated);
+
+        return response()->json($aboutMe); // Return the updated resource
     }
 
-    public function destroy(AboutMe $aboutMe)
+    // DELETE: Delete a specific about_me
+    public function destroy($id)
     {
+        $aboutMe = AboutMe::find($id);
+
+        if (!$aboutMe) {
+            return response()->json(['message' => 'AboutMe not found'], 404);
+        }
+
         $aboutMe->delete();
-        return redirect()->route('partials.about_me.index')->with('success', 'Details deleted successfully.');
+
+        return response()->json(['message' => 'AboutMe deleted successfully']); // Success message
     }
 }
