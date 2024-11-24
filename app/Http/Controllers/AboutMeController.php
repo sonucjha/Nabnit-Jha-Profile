@@ -10,12 +10,12 @@ class AboutMeController extends Controller
     {
         $aboutMe = AboutMe::all();
         
-        return view('about_me.index', compact('aboutMe'));
+        return view('partials.about_me.index', compact('aboutMe'));
     }
 
     public function create()
     {
-        return view('about_me.create');
+        return view('partials.about_me.create');
     }
 
     public function store(Request $request)
@@ -26,12 +26,12 @@ class AboutMeController extends Controller
         ]);
 
         AboutMe::create($request->all());
-        return redirect()->route('about_me.index')->with('success', 'Details saved successfully.');
+        return redirect()->route('partials.about_me.index')->with('success', 'Details saved successfully.');
     }
 
     public function edit(AboutMe $aboutMe)
     {
-        return view('about_me.edit', compact('aboutMe'));
+        return view('partials.about_me.edit', compact('aboutMe'));
     }
 
     public function update(Request $request, AboutMe $aboutMe)
@@ -42,12 +42,12 @@ class AboutMeController extends Controller
         ]);
 
         $aboutMe->update($request->all());
-        return redirect()->route('about_me.index')->with('success', 'Details updated successfully.');
+        return redirect()->route('partials.about_me.index')->with('success', 'Details updated successfully.');
     }
 
     public function destroy(AboutMe $aboutMe)
     {
         $aboutMe->delete();
-        return redirect()->route('about_me.index')->with('success', 'Details deleted successfully.');
+        return redirect()->route('partials.about_me.index')->with('success', 'Details deleted successfully.');
     }
 }
