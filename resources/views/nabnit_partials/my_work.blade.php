@@ -58,9 +58,9 @@
 
                     <div class="isotope-item" data-type="people">
                         <figure class="snip1321">
-                            <img src="{{asset('assets/images/portfolio-04.jpg')}}" alt="sq-sample26" />
+                            <img src="{{asset('css/assets/images/portfolio-04.jpg')}}" alt="sq-sample26" />
                             <figcaption>
-                                <a href="{{asset('assets/images/portfolio-04.jpg')}}" data-lightbox="image-1"
+                                <a href="{{asset('css/assets/images/portfolio-04.jpg')}}" data-lightbox="image-1"
                                     data-title="Caption"><i class="fa fa-search"></i></a>
                                 <h4>Item Fourth</h4>
                                 <span>Re-distribution not allowed</span>
@@ -70,9 +70,9 @@
 
                     <div class="isotope-item" data-type="nature">
                         <figure class="snip1321">
-                            <img src="{{asset('assets/images/portfolio-05.jpg')}}" alt="sq-sample26" />
+                            <img src="{{asset('css/assets/images/portfolio-05.jpg')}}" alt="sq-sample26" />
                             <figcaption>
-                                <a href="{{asset('assets/images/portfolio-05.jpg')}}" data-lightbox="image-1"
+                                <a href="{{asset('css/assets/images/portfolio-05.jpg')}}" data-lightbox="image-1"
                                     data-title="Caption"><i class="fa fa-search"></i></a>
                                 <h4>Fifth Awesome</h4>
                                 <span>Ut sollicitudin risus</span>
@@ -82,9 +82,9 @@
 
                     <div class="isotope-item" data-type="animals">
                         <figure class="snip1321">
-                            <img src="{{asset('assets/images/portfolio-06.jpg')}}" alt="sq-sample26" />
+                            <img src="{{asset('css/assets/images/portfolio-06.jpg')}}" alt="sq-sample26" />
                             <figcaption>
-                                <a href="{{asset('assets/images/portfolio-06.jpg')}}" data-lightbox="image-1"
+                                <a href="{{asset('css/assets/images/portfolio-06.jpg')}}" data-lightbox="image-1"
                                     data-title="Caption"><i class="fa fa-search"></i></a>
                                 <h4>Awesome Sixth</h4>
                                 <span>Donec eget massa ante</span>
