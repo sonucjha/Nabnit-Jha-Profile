@@ -46,7 +46,7 @@
                 description: document.getElementById('description').value,
             };
 
-            axios.post('{{ url('/api/about_me') }}', formData)
+            axios.post('{{ url('/api/about_me/store') }}', formData)
                 .then(response => {
                     alert('Data saved successfully!');
                     document.getElementById('aboutMeForm').reset();
