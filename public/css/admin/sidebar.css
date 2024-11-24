@@ -47,7 +47,8 @@
 
 
 .brand-backgound {
-       background: linear-gradient(to right, #501515, #4e4e4eba) !important;
+       /* background: linear-gradient(to right, #501515, #4e4e4eba) !important; */
+       background: linear-gradient(135deg, #4A90E2, #283e51);
        transform: skew(10deg, 10deg) !important;
        font-size: 2rem !important;
        font-weight: bold !important;

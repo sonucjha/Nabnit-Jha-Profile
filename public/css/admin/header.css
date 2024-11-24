@@ -1,6 +1,7 @@
 /* Navbar background and text styles */
 .custom-navbar {
-    background-color: #4A90E2; /* Light blue color */
+    /* background-color: #4A90E2;  */
+    background: linear-gradient(135deg,#283e51, #4A90E2);
     padding: 0.75rem 1rem;
 }
 
