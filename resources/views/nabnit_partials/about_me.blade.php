@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="left-image">
-                        <img src="assets/images/left-image.jpg" alt="" />
+                        <img src="{{asset('css/assets/images/left-image.jpg')}}" alt="" />
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-image">
-                        <img src="assets/images/right-image.jpg" alt="" />
+                        <img src="{{asset('css/assets/images/right-image.jpg')}}" alt="" />
                     </div>
                 </div>
             </div>

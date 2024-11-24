@@ -5,7 +5,7 @@
           <i class="fa fa-times" id="menu-close"></i>
           <div class="container">
             <div class="image">
-              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
+              <a href="#"><img src="{{asset('css/assets/images/author-image.jpg')}}" alt="" /></a>
             </div>
             <div class="author-content">
               <h4>Reflux Me</h4>
