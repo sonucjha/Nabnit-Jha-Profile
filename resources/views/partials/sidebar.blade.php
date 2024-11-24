@@ -11,7 +11,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('skills') }}">
-                <i class="fas fa-lightbulb me-2"></i> What I’m good at
+                <i class="fas fa-lightbulb me-2"></i> Skills
             </a>
         </li>
         <li class="nav-item">
