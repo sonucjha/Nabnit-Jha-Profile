@@ -4,6 +4,6 @@
 
 @section('content')
     <div class="container">
-        <h1>Welcome to the Admin Socical Account Page</h1>
+        <h1>Welcome to the Admin Image Upload edit Page</h1>
     </div>
 @endsection

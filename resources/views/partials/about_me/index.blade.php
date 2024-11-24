@@ -4,6 +4,6 @@
 
 @section('content')
     <div class="container">
-        <h1>Welcome to the Admin What I Am Good Page</h1>
+        <h1>Welcome to the Admin About Me index Page</h1>
     </div>
 @endsection
