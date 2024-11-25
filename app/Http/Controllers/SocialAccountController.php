@@ -26,26 +26,29 @@ class SocialAccountController extends Controller
 
         $socialAccounts = SocialAccount::create($validated);
 
-         // Redirect to the same page (e.g., the list of AboutMe entries)
+        // Redirect to the same page (e.g., the list of AboutMe entries)
         return redirect()->route('social_account.index')->with('success', 'Record store successfully.');
     }
 
     public function show($id)
     {
-         // Find the record
-         $socialAccount = SocialAccount::findOrFail($id);
+        // Find the record
+        $socialAccount = SocialAccount::findOrFail($id);
 
-         return view('partials.social_account.edit', compact('socialAccount')); // pass data to socialAccount page
+        return view('partials.social_account.edit', compact('socialAccount')); // pass data to socialAccount page
     }
 
     public function update(Request $request, $id)
     {
+        // Find the record to delete
+        $socialAccount = SocialAccount::findOrFail($id);
+
         $validated = $request->validate([
             'name' => 'sometimes|string|max:255',
             'url' => 'sometimes|url',
         ]);
 
-        $socialAccounts->update($validated);
+        $socialAccount->update($validated);
 
         // Redirect to the same page (e.g., the list of AboutMe entries)
         return redirect()->route('social_account.index')->with('success', 'Record update successfully.');
