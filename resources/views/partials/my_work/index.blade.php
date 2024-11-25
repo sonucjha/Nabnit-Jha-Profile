@@ -18,7 +18,7 @@
         <tbody>
             @foreach ($works as $entry)
             <tr>
-                <td>{{ $entry->name }}</td>
+                <td>{{ $entry->title }}</td>
                 <td>{{ $entry->description }}</td>
                 <td class="text-center">
                     <a href="{{ route('works.edit', $entry->id) }}" class="btn btn-warning btn-sm">Edit</a>
