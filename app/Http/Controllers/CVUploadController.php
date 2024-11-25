@@ -11,7 +11,7 @@ class CvUploadController extends Controller
     {
         $cvUploads = CvUpload::all();
         
-        return view('partials.cv_uploads.index', compact('cvUploads'));
+        return view('partials.cv_upload.index', compact('cvUploads'));
     }
 
     public function create()
@@ -39,7 +39,7 @@ class CvUploadController extends Controller
         // Find the record
         $cvUpload = CvUpload::findOrFail($id);
 
-        return view('partials.cv_uploads.edit', compact('cvUpload')); // pass data to about_me page
+        return view('partials.cv_upload.edit', compact('cvUpload')); // pass data to about_me page
     }
 
     public function update(Request $request, $id)
