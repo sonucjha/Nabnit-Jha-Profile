@@ -10,7 +10,7 @@ class ImageUploadController extends Controller
     public function index()
     {
         $images = ImageUpload::all();
-        return view('image_upload.index', compact('images'));
+        return view('partials.image_upload.index', compact('images'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class ImageUploadController extends Controller
             'type' => $request->type,
         ]);
 
-        return redirect()->route('image_upload.index')->with('success', 'Image uploaded successfully.');
+        return redirect()->route('partials.image_upload.index')->with('success', 'Image uploaded successfully.');
     }
 
     public function edit(ImageUpload $imageUpload)
@@ -55,12 +55,12 @@ class ImageUploadController extends Controller
         $imageUpload->type = $request->type;
         $imageUpload->save();
 
-        return redirect()->route('image_upload.index')->with('success', 'Image updated successfully.');
+        return redirect()->route('partials.image_upload.index')->with('success', 'Image updated successfully.');
     }
 
     public function destroy(ImageUpload $imageUpload)
     {
         $imageUpload->delete();
-        return redirect()->route('image_upload.index')->with('success', 'Image deleted successfully.');
+        return redirect()->route('partials.image_upload.index')->with('success', 'Image deleted successfully.');
     }
 }
