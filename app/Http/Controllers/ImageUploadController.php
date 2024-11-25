@@ -64,8 +64,11 @@ class ImageUploadController extends Controller
         return redirect()->route('image_upload.index')->with('success', 'Image updated successfully.');
     }
 
-    public function destroy(ImageUpload $imageUpload)
+    public function destroy($id)
     {
+        // Find the record
+        $imageUpload = ImageUpload::findOrFail($id);
+        
         $imageUpload->delete();
         return redirect()->route('image_upload.index')->with('success', 'Image deleted successfully.');
     }
