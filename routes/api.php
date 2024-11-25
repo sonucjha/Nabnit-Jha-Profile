@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutMeController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\WorkController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,12 +35,12 @@ Route::put('/skills/{id}/update', [SkillController::class, 'update'])->name('ski
 Route::delete('/skills/{id}/delete', [SkillController::class, 'destroy'])->name('skills.destroy'); // DELETE: Delete a specific skills
 
 // work me routes
-Route::get('/work/index', [SkillController::class, 'index'])->name('works.index'); // GET: List all work
+Route::get('/work/index', [WorkController::class, 'index'])->name('works.index'); // GET: List all work
 Route::view('/work/create', 'partials.my_work.create')->name('works.create'); // GET: Create Form
-Route::post('/work/store', [SkillController::class, 'store'])->name('works.store'); // POST: Create a new work
-Route::get('/work/{id}/edit', [SkillController::class, 'show'])->name('works.edit'); // GET: Show a specific work
-Route::put('/work/{id}/update', [SkillController::class, 'update'])->name('works.update'); // PUT: Update a specific work
-Route::delete('/work/{id}/delete', [SkillController::class, 'destroy'])->name('works.destroy'); // DELETE: Delete a specific work
+Route::post('/work/store', [WorkController::class, 'store'])->name('works.store'); // POST: Create a new work
+Route::get('/work/{id}/edit', [WorkController::class, 'show'])->name('works.edit'); // GET: Show a specific work
+Route::put('/work/{id}/update', [WorkController::class, 'update'])->name('works.update'); // PUT: Update a specific work
+Route::delete('/work/{id}/delete', [WorkController::class, 'destroy'])->name('works.destroy'); // DELETE: Delete a specific work
 
 // socical_account me routes
 Route::get('/socical_account/index', [SocicalAccountController::class, 'index'])->name('socical_account.index'); // GET: List all socical_account

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h1>About Me Details</h1>
+    <h1>Skill Details</h1>
     <div class="text-right mb-3">
         <a href="{{ route('skills.create') }}" class="btn btn-primary">Add New</a>
     </div>

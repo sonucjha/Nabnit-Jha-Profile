@@ -9,8 +9,8 @@ class WorkController extends Controller
 {
     public function index()
     {
-        $work = Work::all();
-        return view('partials.works.index', compact('work')); // pass data to about_me page
+        $works = Work::all();
+        return view('partials.my_work.index', compact('works')); // pass data to about_me page
     }
 
     public function create()
@@ -35,7 +35,7 @@ class WorkController extends Controller
         // Find the record
         $work = Work::findOrFail($id);
 
-        return view('partials.Works.edit', compact('work')); // pass data to about_me page
+        return view('partials.my_work.edit', compact('work')); // pass data to about_me page
     }
 
     public function update(Request $request, $id)
