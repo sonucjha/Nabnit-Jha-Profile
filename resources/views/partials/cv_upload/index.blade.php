@@ -6,6 +6,7 @@
     <table class="table table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
+                <th>#</th>
                 <th>CV File</th>
                 <th>Actions</th>
             </tr>
@@ -13,12 +14,12 @@
         <tbody>
             @foreach($cvUploads as $index => $cv)
                 <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $cv->name }}</td>
                     <td>
                         <a href="{{ asset('storage/' . $cv->cv_file) }}" target="_blank" class="btn btn-sm btn-info">
                             Download
                         </a>
-                    </td>
-                    <td>
                         <a href="{{ route('cv_uploads.edit', $cv->id) }}" class="btn btn-sm btn-warning">
                             Edit
                         </a>

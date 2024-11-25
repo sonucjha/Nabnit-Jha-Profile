@@ -17,16 +17,19 @@ class CvUploadSeeder extends Seeder
     {
         DB::table('cv_uploads')->insert([
             [
+                'name' => 'Nabnit CV',
                 'cv_file' => 'uploads/cv/john_doe_cv.pdf',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
+                'name' => 'Sonu CV',
                 'cv_file' => 'uploads/cv/jane_smith_cv.pdf',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
+                'name' => 'Monu CV',
                 'cv_file' => 'uploads/cv/robert_brown_cv.pdf',
                 'created_at' => now(),
                 'updated_at' => now(),
