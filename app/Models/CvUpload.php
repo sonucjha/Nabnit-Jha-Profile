@@ -10,5 +10,5 @@ class CvUpload extends Model
     use HasFactory;
 
     protected $table = 'cv_uploads'; // Ensure the table name matches your database table
-    protected $fillable = ['cv_file'];
+    protected $fillable = ['cv_file','created_at','updated_at'];
 }

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             SocialAccountSeeder::class,
             WorksTableSeeder::class,
             ImageUploadSeeder::class,
-            CvUploadsSeeder::class,
+            CvUploadSeeder::class,
         ]);
     }
 }
