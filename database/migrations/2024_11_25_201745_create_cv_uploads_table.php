@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cv_uploads', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('cv_file'); // File path of the uploaded CV
             $table->timestamps();
         });
