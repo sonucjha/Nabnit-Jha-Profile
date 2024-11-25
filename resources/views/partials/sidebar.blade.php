@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <ul class="nav flex-column brand-background">
+    <ul class=" brand-background nav flex-column">
         <!-- About Me -->
         <li class="nav-item">Nabnit</li>
     </ul>
@@ -31,3 +31,21 @@
         </li>
     </ul>
 </div>
+
+<style>
+    .brand-background{
+        background: linear-gradient(135deg, #205593, #283e51);
+    transform: skew(10deg, 10deg) !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 11.5px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* height: 100px !important; */
+    background-color: #333 !important;
+    }
+</style>

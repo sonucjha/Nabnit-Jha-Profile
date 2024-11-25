@@ -49,6 +49,20 @@
     margin-bottom: 15px;
 }
 
+.nav-item.active {
+    background-color: #007bff; /* Highlight background */
+    color: white; /* Text color */
+    border-radius: 5px;
+}
+
+.nav-item.active .nav-link {
+    color: white; /* Ensure the link text is white */
+}
+
+.nav-item.active .nav-link:hover {
+    text-decoration: none;
+}
+
 .brand-backgound {
     /* background: linear-gradient(to right, #501515, #4e4e4eba) !important; */
     background: linear-gradient(135deg, #205593, #283e51);
@@ -64,18 +78,4 @@
     align-items: center !important;
     /* height: 100px !important; */
     background-color: #333 !important;
-}
-
-.nav-item.active {
-    background-color: #007bff; /* Highlight background */
-    color: white; /* Text color */
-    border-radius: 5px;
-}
-
-.nav-item.active .nav-link {
-    color: white; /* Ensure the link text is white */
-}
-
-.nav-item.active .nav-link:hover {
-    text-decoration: none;
 }
