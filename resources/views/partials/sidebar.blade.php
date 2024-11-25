@@ -20,7 +20,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('socical_account.index') }}">
+            <a class="nav-link" href="{{ route('social_account.index') }}">
                 <i class="fas fa-share-alt me-2"></i> Social Account
             </a>
         </li>        
