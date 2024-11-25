@@ -21,7 +21,7 @@ class WorkController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
 
@@ -44,7 +44,7 @@ class WorkController extends Controller
         $work = Work::findOrFail($id);
 
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
 
