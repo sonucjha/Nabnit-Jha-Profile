@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             SkillSeeder::class,
             SocialAccountSeeder::class,
             WorksTableSeeder::class,
-            WorksTableSeeder::class,
+            ImageUploadSeeder::class,
         ]);
     }
 }
