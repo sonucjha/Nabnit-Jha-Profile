@@ -35,13 +35,19 @@ class ImageUploadController extends Controller
         return redirect()->route('image_upload.index')->with('success', 'Image uploaded successfully.');
     }
 
-    public function edit(ImageUpload $imageUpload)
+    public function show($id)
     {
-        return view('image_upload.edit', compact('imageUpload'));
+        // Find the record
+        $imageUpload = ImageUpload::findOrFail($id);
+
+        return view('partials.image_upload.edit', compact('imageUpload')); // pass data to about_me page
     }
 
-    public function update(Request $request, ImageUpload $imageUpload)
+    public function update(Request $request,$id)
     {
+        // Find the record
+        $imageUpload = ImageUpload::findOrFail($id);
+
         $request->validate([
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'type' => 'required|string|max:255',

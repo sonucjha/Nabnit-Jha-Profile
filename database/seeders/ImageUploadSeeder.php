@@ -17,18 +17,18 @@ class ImageUploadSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
-                'image' => 'uploads/example2.png',
-                'type' => 'banner',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'image' => 'uploads/example3.gif',
-                'type' => 'gallery',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            // [
+            //     'image' => 'uploads/example2.png',
+            //     'type' => 'banner',
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
+            // [
+            //     'image' => 'uploads/example3.gif',
+            //     'type' => 'gallery',
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
         ]);
     }
 }
