@@ -5,6 +5,7 @@ use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SocialAccountController;
+use App\Http\Controllers\ImageUploadController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -51,10 +52,14 @@ Route::get('/social_account/{id}/edit', [SocialAccountController::class, 'show']
 Route::put('/social_account/{id}/update', [SocialAccountController::class, 'update'])->name('social_account.update'); // PUT: Update a specific social_account
 Route::delete('/social_account/{id}/delete', [SocialAccountController::class, 'destroy'])->name('social_account.destroy'); // DELETE: Delete a specific social_account
 
-// image upload  routes
-Route::view('/image-upload/index', 'partials.image_upload.index')->name('image_upload.index');
-Route::view('/image-upload/create', 'partials.image_upload.create')->name('image_upload.create');
-Route::view('/image-upload/edit', 'partials.image_upload.edit')->name('image_upload.edit');
+// image_upload me routes
+Route::get('/image_upload/index', [ImageUploadController::class, 'index'])->name('image_upload.index'); // GET: List all image_upload
+Route::view('/image_upload/create', 'partials.image_upload.create')->name('image_upload.create'); // GET: Create Form
+Route::post('/image_upload/store', [ImageUploadController::class, 'store'])->name('image_upload.store'); // POST: Create a new image_upload
+Route::get('/image_upload/{id}/edit', [ImageUploadController::class, 'show'])->name('image_upload.edit'); // GET: Show a specific image_upload
+Route::put('/image_upload/{id}/update', [ImageUploadController::class, 'update'])->name('image_upload.update'); // PUT: Update a specific image_upload
+Route::delete('/image_upload/{id}/delete', [ImageUploadController::class, 'destroy'])->name('image_upload.destroy'); // DELETE: Delete a specific image_upload
+
 
 // Route::group([
 
