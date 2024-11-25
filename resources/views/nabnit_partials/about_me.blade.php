@@ -39,7 +39,7 @@
 <style>
     .btn-stylish {
     display: inline-block;
-    background: linear-gradient(45deg, #007bff, #0056b3);
+    background: linear-gradient(45deg, #891a6d, #007bff);
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -52,7 +52,7 @@
 }
 
 .btn-stylish:hover {
-    background: linear-gradient(45deg, #0056b3, #007bff);
+    background: linear-gradient(45deg, #14e77e, #0056b3);
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
     transform: scale(1.05);
@@ -71,21 +71,21 @@
 }
 
 .info-text {
-    color: #007bff;
+    color: #14e77e;
     font-weight: 500;
     margin-left: 5px;
 }
 
 .info-text a {
-    color: #007bff;
+    color: #14e77e;
     text-decoration: none;
     border-bottom: 1px dashed transparent;
     transition: all 0.3s ease;
 }
 
 .info-text a:hover {
-    color: #0056b3;
-    border-bottom: 1px dashed #0056b3;
+    color: #14e77e;
+    border-bottom: 1px dashed #14e77e;
 }
 
 .cs_about{
