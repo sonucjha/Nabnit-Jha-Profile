@@ -2,7 +2,11 @@
 
 /* Sidebar Styling */
 .sidebar {
-    background: linear-gradient(135deg, #4b79a1, #283e51); /* Gradient Background */
+    background: linear-gradient(
+        135deg,
+        #4b79a1,
+        #283e51
+    ); /* Gradient Background */
     color: #fff;
     padding: 20px;
     width: 250px;
@@ -45,20 +49,33 @@
     margin-bottom: 15px;
 }
 
-
 .brand-backgound {
-       /* background: linear-gradient(to right, #501515, #4e4e4eba) !important; */
-       background: linear-gradient(135deg, #205593, #283e51);
-       transform: skew(10deg, 10deg) !important;
-       font-size: 2rem !important;
-       font-weight: bold !important;
-       text-transform: uppercase !important;
-       letter-spacing: 11.5px !important;
-       border-radius: 8px !important;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-       display: flex !important;
-       justify-content: center !important;
-       align-items: center !important;
-       /* height: 100px !important; */
-       background-color: #333 !important;
-  }
+    /* background: linear-gradient(to right, #501515, #4e4e4eba) !important; */
+    background: linear-gradient(135deg, #205593, #283e51);
+    transform: skew(10deg, 10deg) !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 11.5px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* height: 100px !important; */
+    background-color: #333 !important;
+}
+
+.nav-item.active {
+    background-color: #007bff; /* Highlight background */
+    color: white; /* Text color */
+    border-radius: 5px;
+}
+
+.nav-item.active .nav-link {
+    color: white; /* Ensure the link text is white */
+}
+
+.nav-item.active .nav-link:hover {
+    text-decoration: none;
+}
