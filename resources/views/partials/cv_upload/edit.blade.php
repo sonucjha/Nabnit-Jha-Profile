@@ -6,19 +6,26 @@
         <form action="{{ route('cv_uploads.update', $cvUpload->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            
+
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" id="name" name="name" value="{{ $cvUpload->name }}" class="form-control">
             </div>
-            
-           
-            
+
+
+
             <div class="mb-3">
                 <label for="cv_file" class="form-label">Upload CV</label>
                 <input type="file" id="cv_file" name="cv_file" class="form-control">
             </div>
-            
+            <div class="mb-3">
+                @if ($cvUpload->cv_file)
+                    <p>File Path: {{ $cvUpload->cv_file }}</p>
+                @else
+                <p>File Not Uploaded</p>
+                @endif
+            </div>
+
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Update</button>
             </div>
