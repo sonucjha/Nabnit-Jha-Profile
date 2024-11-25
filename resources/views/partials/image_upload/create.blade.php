@@ -29,7 +29,7 @@
             <h3 class="text-center">Preview Image</h3>
             <div class="card shadow-sm">
                 <div class="card-body text-center">
-                    <img id="preview-image" src="#" alt="Image Preview" class="img-fluid" style="max-height: 300px; display: none;">
+                    <img id="preview-image" src="#" alt="Image Preview" class="img-fluid" style="max-height: 100px; display: none;">
                 </div>
             </div>
         </div>
