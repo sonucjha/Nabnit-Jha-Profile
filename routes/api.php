@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutMeController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SocicalAccountController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
