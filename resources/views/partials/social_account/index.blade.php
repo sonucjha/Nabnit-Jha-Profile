@@ -12,7 +12,6 @@
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">URL</th>
-                <th scope="col">Icon</th>
                 <th scope="col" class="text-center">Actions</th>
             </tr>
         </thead>
@@ -21,7 +20,6 @@
             <tr>
                 <td>{{ $entry->name }}</td>
                 <td>{{ $entry->url }}</td>
-                <td>{{ $entry->icon }}</td>
                 <td class="text-center">
                     <a href="{{ route('social_account.edit', $entry->id) }}" class="btn btn-warning btn-sm">Edit</a>
                     <form action="{{ route('social_account.destroy', $entry->id) }}" method="POST" style="display: inline;">

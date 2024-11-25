@@ -12,19 +12,16 @@ class SocialAccountSeeder extends Seeder
         SocialAccount::create([
             'name' => 'Facebook',
             'url' => 'https://facebook.com',
-            'icon' => 'facebook-icon.png',
         ]);
 
         SocialAccount::create([
             'name' => 'Twitter',
             'url' => 'https://twitter.com',
-            'icon' => 'twitter-icon.png',
         ]);
 
         SocialAccount::create([
             'name' => 'Instagram',
             'url' => 'https://instagram.com',
-            'icon' => 'instagram-icon.png',
         ]);
     }
 }

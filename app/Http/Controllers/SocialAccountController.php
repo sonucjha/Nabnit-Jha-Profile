@@ -22,7 +22,6 @@ class SocialAccountController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'url' => 'required|url',
-            'icon' => 'required|string',
         ]);
 
         $socialAccounts = SocialAccount::create($validated);
@@ -34,9 +33,9 @@ class SocialAccountController extends Controller
     public function show($id)
     {
          // Find the record
-         $socialAccounts = SocialAccount::findOrFail($id);
+         $socialAccount = SocialAccount::findOrFail($id);
 
-         return view('partials.social_account.edit', compact('socialAccounts')); // pass data to socialAccounts page
+         return view('partials.social_account.edit', compact('socialAccount')); // pass data to socialAccount page
     }
 
     public function update(Request $request, $id)
@@ -44,7 +43,6 @@ class SocialAccountController extends Controller
         $validated = $request->validate([
             'name' => 'sometimes|string|max:255',
             'url' => 'sometimes|url',
-            'icon' => 'sometimes|string',
         ]);
 
         $socialAccounts->update($validated);
