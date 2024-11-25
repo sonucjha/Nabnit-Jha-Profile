@@ -41,15 +41,18 @@ Route::get('/work/{id}/edit', [SkillController::class, 'show'])->name('works.edi
 Route::put('/work/{id}/update', [SkillController::class, 'update'])->name('works.update'); // PUT: Update a specific work
 Route::delete('/work/{id}/delete', [SkillController::class, 'destroy'])->name('works.destroy'); // DELETE: Delete a specific work
 
+// socical_account me routes
+Route::get('/socical_account/index', [SocicalAccountController::class, 'index'])->name('socical_account.index'); // GET: List all socical_account
+Route::view('/socical_account/create', 'partials.socical_account.create')->name('socical_account.create'); // GET: Create Form
+Route::post('/socical_account/store', [SocicalAccountController::class, 'store'])->name('socical_account.store'); // POST: Create a new socical_account
+Route::get('/socical_account/{id}/edit', [SocicalAccountController::class, 'show'])->name('socical_account.edit'); // GET: Show a specific socical_account
+Route::put('/socical_account/{id}/update', [SocicalAccountController::class, 'update'])->name('socical_account.update'); // PUT: Update a specific socical_account
+Route::delete('/socical_account/{id}/delete', [SocicalAccountController::class, 'destroy'])->name('socical_account.destroy'); // DELETE: Delete a specific socical_account
+
 // image upload  routes
 Route::view('/image-upload/index', 'partials.image_upload.index')->name('image_upload.index');
 Route::view('/image-upload/create', 'partials.image_upload.create')->name('image_upload.create');
 Route::view('/image-upload/edit', 'partials.image_upload.edit')->name('image_upload.edit');
-
-// socical account routes
-Route::view('/socical-account/index', 'partials.socical_account.index')->name('socical_account.index');
-Route::view('/socical-account/create', 'partials.socical_account.create')->name('socical_account.create');
-Route::view('/socical-account/edit', 'partials.socical_account.edit')->name('socical_account.edit');
 
 // Route::group([
 
