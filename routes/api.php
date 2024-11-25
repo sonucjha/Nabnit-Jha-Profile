@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutMeController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,9 +26,13 @@ Route::put('/about_me/{id}/update', [AboutMeController::class, 'update'])->name(
 Route::delete('/about_me/{id}/delete', [AboutMeController::class, 'destroy'])->name('about_me.destroy'); // DELETE: Delete a specific about_me
 
 // skills me routes
-Route::view('/skills/index', 'partials.skills.index')->name('skills.index');
-Route::view('/skills/create', 'partials.skills.create')->name('skills.create');
-Route::view('/skills/edit', 'partials.skills.edit')->name('skills.edit');
+Route::get('/skills/index', [SkillController::class, 'index'])->name('skills.index'); // GET: List all skills
+Route::view('/skills/create', 'partials.skills.create')->name('skills.create'); // GET: Create Form
+Route::post('/skills/store', [SkillController::class, 'store'])->name('skills.store'); // POST: Create a new skills
+Route::get('/skills/{id}/edit', [SkillController::class, 'show'])->name('skills.edit'); // GET: Show a specific skills
+Route::put('/skills/{id}/update', [SkillController::class, 'update'])->name('skills.update'); // PUT: Update a specific skills
+Route::delete('/skills/{id}/delete', [SkillController::class, 'destroy'])->name('skills.destroy'); // DELETE: Delete a specific skills
+
 
 // work  routes
 Route::view('/work/index', 'partials.my_work.index')->name('my_work.index');
