@@ -6,6 +6,7 @@ use App\Http\Controllers\WorkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SocialAccountController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\CvUploadController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -61,12 +62,12 @@ Route::put('/image_upload/{id}/update', [ImageUploadController::class, 'update']
 Route::delete('/image_upload/{id}/delete', [ImageUploadController::class, 'destroy'])->name('image_upload.destroy'); // DELETE: Delete a specific image_upload
 
 // cv_upload me routes
-Route::get('/cv_upload/index', [ImageUploadController::class, 'index'])->name('cv_upload.index'); // GET: List all cv_upload
-Route::view('/cv_upload/create', 'partials.cv_upload.create')->name('cv_upload.create'); // GET: Create Form
-Route::post('/cv_upload/store', [ImageUploadController::class, 'store'])->name('cv_upload.store'); // POST: Create a new cv_upload
-Route::get('/cv_upload/{id}/edit', [ImageUploadController::class, 'show'])->name('cv_upload.edit'); // GET: Show a specific cv_upload
-Route::put('/cv_upload/{id}/update', [ImageUploadController::class, 'update'])->name('cv_upload.update'); // PUT: Update a specific cv_upload
-Route::delete('/cv_upload/{id}/delete', [ImageUploadController::class, 'destroy'])->name('cv_upload.destroy'); // DELETE: Delete a specific cv_upload
+Route::get('/cv_upload/index', [CvUploadController::class, 'index'])->name('cv_uploads.index'); // GET: List all cv_upload
+Route::view('/cv_upload/create', 'partials.cv_upload.create')->name('cv_uploads.create'); // GET: Create Form
+Route::post('/cv_upload/store', [CvUploadController::class, 'store'])->name('cv_uploads.store'); // POST: Create a new cv_upload
+Route::get('/cv_upload/{id}/edit', [CvUploadController::class, 'show'])->name('cv_uploads.edit'); // GET: Show a specific cv_upload
+Route::put('/cv_upload/{id}/update', [CvUploadController::class, 'update'])->name('cv_uploads.update'); // PUT: Update a specific cv_upload
+Route::delete('/cv_upload/{id}/delete', [CvUploadController::class, 'destroy'])->name('cv_uploads.destroy'); // DELETE: Delete a specific cv_upload
 
 // Route::group([
 
