@@ -30,8 +30,8 @@
             </a>
         </li>
 
-        <li class="nav-item {{ request()->routeIs('cv_upload.index') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('cv_upload.index') }}">
+        <li class="nav-item {{ request()->routeIs('cv_uploads.index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('cv_uploads.index') }}">
                 <i class="fas fa-file-alt me-2"></i>Upload CV
             </a>
         </li>
