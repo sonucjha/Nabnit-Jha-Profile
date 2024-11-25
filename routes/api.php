@@ -60,6 +60,13 @@ Route::get('/image_upload/{id}/edit', [ImageUploadController::class, 'show'])->n
 Route::put('/image_upload/{id}/update', [ImageUploadController::class, 'update'])->name('image_upload.update'); // PUT: Update a specific image_upload
 Route::delete('/image_upload/{id}/delete', [ImageUploadController::class, 'destroy'])->name('image_upload.destroy'); // DELETE: Delete a specific image_upload
 
+// cv_upload me routes
+Route::get('/cv_upload/index', [ImageUploadController::class, 'index'])->name('cv_upload.index'); // GET: List all cv_upload
+Route::view('/cv_upload/create', 'partials.cv_upload.create')->name('cv_upload.create'); // GET: Create Form
+Route::post('/cv_upload/store', [ImageUploadController::class, 'store'])->name('cv_upload.store'); // POST: Create a new cv_upload
+Route::get('/cv_upload/{id}/edit', [ImageUploadController::class, 'show'])->name('cv_upload.edit'); // GET: Show a specific cv_upload
+Route::put('/cv_upload/{id}/update', [ImageUploadController::class, 'update'])->name('cv_upload.update'); // PUT: Update a specific cv_upload
+Route::delete('/cv_upload/{id}/delete', [ImageUploadController::class, 'destroy'])->name('cv_upload.destroy'); // DELETE: Delete a specific cv_upload
 
 // Route::group([
 

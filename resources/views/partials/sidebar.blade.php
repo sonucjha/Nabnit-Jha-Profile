@@ -29,12 +29,19 @@
                 <i class="fas fa-upload me-2"></i> Image Upload
             </a>
         </li>
+
+        <li class="nav-item {{ request()->routeIs('cv_upload.index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('cv_upload.index') }}">
+                <i class="fas fa-file-alt me-2"></i>Upload CV
+            </a>
+        </li>
+        
     </ul>
 </div>
 
 <style>
     .brand-background{
-        background: linear-gradient(135deg, #205593, #283e51);
+          background: linear-gradient(135deg, #205593, #283e51);
     transform: skew(10deg, 10deg) !important;
     font-size: 2rem !important;
     font-weight: bold !important;
