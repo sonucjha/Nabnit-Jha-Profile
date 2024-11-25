@@ -96,7 +96,7 @@
 .par_about_me{
     display: flex!important;
     flex-direction: column!important;
-    justify-content:space-between!important;
+    /* justify-content:space-between!important; */
 }
 .cs_about strong{
     color: white;
