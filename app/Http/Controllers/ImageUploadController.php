@@ -9,7 +9,7 @@ class ImageUploadController extends Controller
 {
     public function index()
     {
-        $images = ImageUpload::all();
+        $images = ImageUpload::paginate(3);
         return view('partials.image_upload.index', compact('images'));
     }
 

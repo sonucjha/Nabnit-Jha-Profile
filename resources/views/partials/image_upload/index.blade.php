@@ -35,5 +35,8 @@
             </tbody>
         </table>
     </div>
+    <div class="mt-3">
+        {{ $images->links('pagination::bootstrap-4') }}
+    </div>
 </div>
 @endsection
