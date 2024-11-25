@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('my_work.index') }}">
+            <a class="nav-link" href="{{ route('works.index') }}">
                 <i class="fas fa-briefcase me-2"></i> My Work
             </a>
         </li>

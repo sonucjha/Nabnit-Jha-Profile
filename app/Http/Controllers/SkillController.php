@@ -9,8 +9,8 @@ class SkillController extends Controller
 {
     public function index()
     {
-        $skill = Skill::all();
-        return view('partials.skills.index', compact('skill')); // pass data to about_me page
+        $skills = Skill::all();
+        return view('partials.skills.index', compact('skills')); // pass data to about_me page
     }
 
     public function create()
