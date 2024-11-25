@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SkillSeeder::class,
             SocialAccountSeeder::class,
+            WorksTableSeeder::class,
         ]);
     }
 }
