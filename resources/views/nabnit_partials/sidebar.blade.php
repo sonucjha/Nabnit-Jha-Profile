@@ -5,11 +5,11 @@
           <i class="fa fa-times" id="menu-close"></i>
           <div class="container">
             <div class="image">
-              <a href="#"><img src="{{asset('css/assets/images/author-image.jpg')}}" alt="" /></a>
+              <a href="#"><img src="{{asset('css/assets/images/betu.jpg')}}" alt="" /></a>
             </div>
             <div class="author-content">
-              <h4>Reflux Me</h4>
-              <span>Web Designer</span>
+              <h4>Nabnit Chandra Jha</h4>
+              <span>Laravel Developer</span>
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">

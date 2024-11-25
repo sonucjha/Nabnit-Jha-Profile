@@ -12,17 +12,17 @@
             <div class="row">
                 <div class="col-md-6 about_me">
                     <div class="left-image">
-                        <img src="{{asset('css/assets/images/left-image.jpg')}}" alt="Profile Image" class="img-fluid" />
+                        <img src="{{asset('css/assets/images/betu.jpg')}}" alt="Profile Image" class="img-fluid" />
                     </div>
                 </div>
                 <div class="col-md-6 par_about_me">
                     <div class="right-text">
                         <ul class="mb-5 mb-lg-0 profile-list list-unstyled cs_about">
-                            <li><strong>Full Name:</strong> <span class="info-text">Ben Wilson</span></li>
-                            <li><strong>Higher Education:</strong> <span class="info-text"><a href="https://company.co" target="_blank">company.co</a></span></li>
-                            <li><strong>Total Experience:</strong> <span class="info-text"><a href="mailto:hello@company.co">hello@company.co</a></span></li>
+                            <li><strong>Full Name:</strong> <span class="info-text">Nabnit Chandra Jha</span></li>
+                            <li><strong>Higher Education:</strong> <span class="info-text"><a href="https://company.co" target="_blank">MCA</a></span></li>
+                            <li><strong>Total Experience:</strong> <span class="info-text"><a href="mailto:hello@company.co">sonucjha@gmail.com</a></span></li>
                             <li><strong>Expected Salary:</strong> <span class="info-text">Ben Wilson</span></li>
-                            <li><strong>Skills:</strong> <span class="info-text">Ben Wilson</span></li>
+                            <li><strong>Skills:</strong> <span class="info-text">Laravel , VUE , SQL</span></li>
                             {{-- <li><strong>Date of Birth:</strong> <span class="info-text">26 September 1999</span></li> --}}
 
                         </ul>
