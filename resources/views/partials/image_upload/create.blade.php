@@ -23,5 +23,36 @@
                 </form>
             </div>
         </div>
+
+        <!-- Image Preview Div -->
+        <div class="mt-4">
+            <h3 class="text-center">Preview Image</h3>
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <img id="preview-image" src="#" alt="Image Preview" class="img-fluid" style="max-height: 300px; display: none;">
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageInput = document.getElementById('image');
+            const previewImage = document.getElementById('preview-image');
+
+            imageInput.addEventListener('change', function () {
+                const file = this.files[0]; // Get the selected file
+                if (file) {
+                    const reader = new FileReader(); // Initialize FileReader
+                    reader.onload = function (e) {
+                        previewImage.src = e.target.result; // Set image source to file result
+                        previewImage.style.display = 'block'; // Display the image
+                    };
+                    reader.readAsDataURL(file); // Read the file as Data URL
+                }
+            });
+        });
+    </script>
+
