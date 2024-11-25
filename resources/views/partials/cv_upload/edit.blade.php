@@ -12,10 +12,7 @@
                 <input type="text" id="name" name="name" value="{{ $cvUpload->name }}" class="form-control">
             </div>
             
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" value="{{ $cvUpload->email }}" class="form-control">
-            </div>
+           
             
             <div class="mb-3">
                 <label for="cv_file" class="form-label">Upload CV</label>
