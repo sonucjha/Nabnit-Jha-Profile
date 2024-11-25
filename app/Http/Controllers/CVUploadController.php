@@ -29,6 +29,7 @@ class CvUploadController extends Controller
         $filePath = $request->file('cv_file')->store('cvs', 'public');
 
         CvUpload::create([
+            'name' => $request->name,
             'cv_file' => $filePath,
         ]);
 
