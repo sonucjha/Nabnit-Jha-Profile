@@ -21,7 +21,7 @@
                             <li><strong>Full Name:</strong> <span class="info-text">Nabnit Chandra Jha</span></li>
                             <li><strong>Higher Education:</strong> <span class="info-text"><a href="https://company.co" target="_blank">MCA</a></span></li>
                             <li><strong>Total Experience:</strong> <span class="info-text"><a href="mailto:hello@company.co">sonucjha@gmail.com</a></span></li>
-                            <li><strong>Expected Salary:</strong> <span class="info-text">Ben Wilson</span></li>
+                            <li><strong>Expected Salary:</strong> <span class="info-text">Talk Later</span></li>
                             <li><strong>Skills:</strong> <span class="info-text">Laravel , VUE , SQL</span></li>
                             {{-- <li><strong>Date of Birth:</strong> <span class="info-text">26 September 1999</span></li> --}}
 
