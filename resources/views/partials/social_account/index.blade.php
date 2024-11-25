@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($socicalAccounts as $entry)
+            @foreach ($socialAccounts as $entry)
             <tr>
                 <td>{{ $entry->name }}</td>
                 <td>{{ $entry->url }}</td>
