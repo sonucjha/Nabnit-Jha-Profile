@@ -33,11 +33,13 @@ Route::get('/skills/{id}/edit', [SkillController::class, 'show'])->name('skills.
 Route::put('/skills/{id}/update', [SkillController::class, 'update'])->name('skills.update'); // PUT: Update a specific skills
 Route::delete('/skills/{id}/delete', [SkillController::class, 'destroy'])->name('skills.destroy'); // DELETE: Delete a specific skills
 
-
-// work  routes
-Route::view('/work/index', 'partials.my_work.index')->name('my_work.index');
-Route::view('/work/create', 'partials.my_work.create')->name('my_work.create');
-Route::view('/work/edit', 'partials.my_work.edit')->name('my_work.edit');
+// work me routes
+Route::get('/work/index', [SkillController::class, 'index'])->name('works.index'); // GET: List all work
+Route::view('/work/create', 'partials.my_work.create')->name('works.create'); // GET: Create Form
+Route::post('/work/store', [SkillController::class, 'store'])->name('works.store'); // POST: Create a new work
+Route::get('/work/{id}/edit', [SkillController::class, 'show'])->name('works.edit'); // GET: Show a specific work
+Route::put('/work/{id}/update', [SkillController::class, 'update'])->name('works.update'); // PUT: Update a specific work
+Route::delete('/work/{id}/delete', [SkillController::class, 'destroy'])->name('works.destroy'); // DELETE: Delete a specific work
 
 // image upload  routes
 Route::view('/image-upload/index', 'partials.image_upload.index')->name('image_upload.index');
