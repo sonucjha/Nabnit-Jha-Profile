@@ -8,8 +8,8 @@
             @method('PUT')
             
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $skill->name) }}">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" value="{{ old('title', $skill->name) }}">
             </div>
             
             <div class="mb-3">
