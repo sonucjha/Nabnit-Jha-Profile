@@ -21,6 +21,7 @@ class SkillController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'icon' => 'required|string|max:255',
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
@@ -44,6 +45,7 @@ class SkillController extends Controller
         $skill = Skill::findOrFail($id);
 
         $validated = $request->validate([
+            'icon' => 'required|string|max:255',
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);

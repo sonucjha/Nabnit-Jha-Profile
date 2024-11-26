@@ -12,6 +12,7 @@
             <tr>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
+                <th scope="col">Icon</th>
                 <th scope="col" class="text-center">Actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
             <tr>
                 <td>{{ $entry->name }}</td>
                 <td>{{ $entry->description }}</td>
+                <td>{{ $entry->icon }}</td>
                 <td class="text-center">
                     <a href="{{ route('skills.edit', $entry->id) }}" class="btn btn-warning btn-sm">Edit</a>
                     <form action="{{ route('skills.destroy', $entry->id) }}" method="POST" style="display: inline;">

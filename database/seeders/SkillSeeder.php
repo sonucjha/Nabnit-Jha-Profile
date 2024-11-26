@@ -8,9 +8,10 @@ class SkillSeeder extends Seeder
 {
     public function run()
     {
-        Skill::create(['name' => 'Laravel', 'description' => 'A PHP framework for web artisans.']);
-        Skill::create(['name' => 'Vue.js', 'description' => 'A progressive JavaScript framework.']);
-        Skill::create(['name' => 'React', 'description' => 'A JavaScript library for building user interfaces.']);
+        Skill::create(['icon' => 'first-service-icon service-icon','name' => 'Laravel', 'description' => 'A PHP framework for web artisans.']);
+        Skill::create(['icon' => 'second-service-icon service-icon','name' => 'Vue.js', 'description' => 'A progressive JavaScript framework.']);
+        Skill::create(['icon' => 'third-service-icon service-icon','name' => 'SQL', 'description' => 'A JavaScript library for building user interfaces.']);
+        Skill::create(['icon' => 'fourth-service-icon service-icon','name' => 'Nuxt Js', 'description' => 'A Nuxt Js library for building user interfaces.']);
     }
 }
 

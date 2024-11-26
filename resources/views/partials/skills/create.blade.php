@@ -27,6 +27,13 @@
                                 <div class="invalid-feedback" id="descriptionError"></div>
                             </div>
 
+                              <!-- Icon Field -->
+                              <div class="mb-3">
+                                <label for="icon" class="form-label">Icon</label>
+                                <textarea class="form-control" id="icon" name="icon" rows="5" placeholder="Enter icon"></textarea>
+                                <div class="invalid-feedback" id="iconError"></div>
+                            </div>
+
                             <!-- Submit Button -->
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
