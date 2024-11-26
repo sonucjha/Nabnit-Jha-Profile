@@ -15,7 +15,7 @@
              <!-- File Upload Form -->
              <div class="mb-3">
                 <label for="cv_file" class="form-label">Upload CV</label>
-                <input class="form-control" type="file" name="cv_file" id="cv_file"
+                <input class="form-control" type="file" name="cv_file" id="cv_file" src="{{ asset('storage/' . $cvUpload->cv_file) }}" 
                     accept="image/*,video/*,application/pdf" onchange="showPreview(event)">
             </div>
 
