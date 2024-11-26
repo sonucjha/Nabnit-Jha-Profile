@@ -15,8 +15,15 @@
                             @method('POST')
                             <!-- Title Field -->
                             <div class="mb-3">
-                                <label for="name" class="form-label">name</label>
+                                <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                                <div class="invalid-feedback" id="titleError"></div>
+                            </div>
+
+                            <!-- Icon Field -->
+                            <div class="mb-3">
+                                <label for="icon" class="form-label">Icon</label>
+                                <input type="text" class="form-control" id="icon" name="icon" placeholder="Enter icon">
                                 <div class="invalid-feedback" id="titleError"></div>
                             </div>
 
@@ -25,13 +32,6 @@
                                 <label for="description" class="form-label">Description</label>
                                 <textarea class="form-control" id="description" name="description" rows="5" placeholder="Enter description"></textarea>
                                 <div class="invalid-feedback" id="descriptionError"></div>
-                            </div>
-
-                              <!-- Icon Field -->
-                              <div class="mb-3">
-                                <label for="icon" class="form-label">Icon</label>
-                                <textarea class="form-control" id="icon" name="icon" rows="5" placeholder="Enter icon"></textarea>
-                                <div class="invalid-feedback" id="iconError"></div>
                             </div>
 
                             <!-- Submit Button -->
