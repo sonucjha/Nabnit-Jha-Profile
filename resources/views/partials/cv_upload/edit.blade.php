@@ -12,10 +12,10 @@
                 <input type="text" id="name" name="name" value="{{ $cvUpload->name }}" class="form-control">
             </div>
 
-             <!-- File Upload Form -->
-             <div class="mb-3">
+            <!-- File Upload Form -->
+            <div class="mb-3">
                 <label for="cv_file" class="form-label">Upload CV</label>
-                <input class="form-control" type="file" name="cv_file" id="cv_file" 
+                <input class="form-control" type="file" name="cv_file" id="cv_file"
                     accept="image/*,video/*,application/pdf" onchange="showPreview(event)">
             </div>
 
@@ -23,12 +23,12 @@
                 <button type="submit" class="btn btn-primary">Update</button>
             </div>
 
-             <!-- Preview Section -->
-             <div id="previewContainer" class="preview-container d-none">
+            <!-- Preview Section -->
+            <div id="previewContainer" class="preview-container d-none">
                 <h4>Preview:</h4>
                 <img id="previewImage" class="preview-image d-none" alt="Image Preview">
                 <video id="previewVideo" class="preview-video d-none" controls></video>
-                <iframe id="previewPDF" class="preview-pdf d-none"></iframe>
+                <iframe id="previewPDF" src="{{ asset('storage/' . $cvUpload->cv_file) }}" class="preview-pdf d-none"></iframe>
                 <p id="previewText" class="text-muted"></p>
             </div>
         </form>
@@ -94,3 +94,4 @@
         }
     }
 </script>
+ 
