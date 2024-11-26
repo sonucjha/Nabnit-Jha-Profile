@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\CvUpload;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+// Add this at the top of the file
 
 class CvUploadController extends Controller
 {
     public function index()
     {
         $cvUploads = CvUpload::all();
-        
+
         return view('partials.cv_upload.index', compact('cvUploads'));
     }
 
@@ -26,7 +28,12 @@ class CvUploadController extends Controller
             'cv_file' => 'required|file|mimes:pdf,doc,docx|max:2048',
         ]);
 
-        $filePath = $request->file('cv_file')->store('cvs', 'public');
+        // Generate a custom filename
+        $fileExtension = $request->file('cv_file')->getClientOriginalExtension();
+        $fileName = Str::slug($request->name) . '_' . time() . '.' . $fileExtension;
+
+        // Save the file with the new name
+        $filePath = $request->file('cv_file')->storeAs('cvs', $fileName, 'public');
 
         CvUpload::create([
             'name' => $request->name,
@@ -51,7 +58,7 @@ class CvUploadController extends Controller
 
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'cv_file' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+            'cv_file' => 'required|file|mimes:pdf,doc,docx|max:2048',
         ]);
 
         if ($request->hasFile('cv_file')) {
@@ -59,7 +66,8 @@ class CvUploadController extends Controller
             $cvUpload->cv_file = $filePath;
         }
 
-        $cvUpload->update($validated);
+        $cvUpload->name = $request->name;
+        $cvUpload->save();
 
         return redirect()->route('cv_uploads.index')->with('success', 'CV updated successfully!');
     }
